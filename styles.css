@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada&family=Noto+Sans&display=swap');
+
+body {
+    background-color: #03045E;
+    color: #CAF0F8;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #0077B6;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+h1 {
+    color: #90E0EF;
+    margin: 0; /* Remove default margin */
+}
+
+h2 {
+    color: #ADE8F4;
+    font-size: 2rem;
+}
+
+/* Fade-in effect for text display */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade-out effect for text hiding */
+.fade-out {
+    opacity: 0;
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+/* Reduced fade-in effect for profile image */
+.profile-fade {
+    opacity: 0;
+    animation: fadeInProfile 1s 0.5s forwards; /* Adjust duration as needed */
+}
+
+@keyframes fadeInProfile {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Profile image styling to fit within the header */
+header img.profile-fade {
+    max-width: 250px; /* Set desired maximum width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Additional specific fade effects */
+.subtitle-fade {
+    opacity: 0;
+    animation: fadeIn 1s 1s forwards; /* Adjust delay as needed */
+}
+
+/* Styling for navbar links */
+.navbar-link {
+    color: #EEEEEE; /* Adjust color as needed */
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #ADE8F4; /* Adjust hover color as needed */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center; /* Center align items */
+        padding: 20px 0; /* Add some padding */
+    }
+
+    nav {
+        position: relative; /* Position nav relative on mobile */
+        margin-bottom: 20px; /* Add space below nav */
+    }
+
+    img.profile-fade {
+        margin-bottom: 20px; /* Add space below the image */
+    }
+}
+
+/* Projects slider  */
+/* Responsive Container */
+#project-slider {
+    background-color:#48CAE4;
+    width: 100%; /* Ensure full width */
+    max-width: 1000px; /* Set a max width */
+    height: auto; /* Let height adjust based on content */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Button Styling */
+.next-button, .prev-button {
+    background-color: #0077B6;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Text Colors and Responsiveness */
+.project-title {
+    color: #023E8A;
+    font-size: 1.5rem;
+    text-align: center; /* Center align text */
+}
+
+.project-description {
+    color: #0077B6;
+    font-size: 1rem;
+    text-align: center; /* Center align text */
+}
+
+/* Responsive Images */
+.project-slide img {
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+
+/* Flexbox for vertical alignment */
+.project-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+/* Media queries for further adjustments */
+@media (min-width: 640px) {
+    #project-slider {
+        width: 90%;
+    }
+
+    .next-button, .prev-button {
+        padding: 15px;
+        font-size: 1.25rem;
+    }
+
+    .project-title {
+        font-size: 1.75rem;
+    }
+
+    .project-description {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #project-slider {
+        width: 80%;
+    }
+}
+
+/* sketch slides */
+
+/* Style for the Splide slider */
+#sketch-slides {
+    background-color: #023E8A;
+    height: 400px; /* Set a fixed height for the slider container */
+    overflow: visible; /* Allow overflow so images can enlarge without being cut off */
+}
+
+/* Basic styles for the slider images */
+.sketch-image {
+    display: block; /* Ensure images are block elements */
+    width: auto; /* Allow image width to vary */
+    max-height: 300px; /* Set a maximum height for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* Hover effect for images */
+.sketch-image:hover {
+    transform: scale(1.05); /* Enlarge the image slightly */
+    z-index: 2; /* Bring the hovered image above others */
+}
+
+/* Style for the Splide slides */
+.splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px; /* Add horizontal padding */
+    overflow: hidden; /* Prevent overflow from the slide itself */
+}
+
+/* Contact  */
+/* Basic styles for the contact section */
+#contact {
+    background-color: #03045E; /* Optional: Background color for the section */
+}
+.contact-container {
+    background-color: #0096C7;
+}
+.contact-heading {
+    color: #ADE8F4; /* Heading color */
+}
+
+/* Styling for contact links */
+.contact-link {
+    color: #FFFFFF; /* Link color */
+    text-decoration: underline; /* Underline links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.contact-link:hover {
+    color: #90E0EF; /* Change link color on hover */
+}
+
+/* Responsive layout for the contact section */
+@media (max-width: 768px) {
+   
+    .contact-heading {
+        font-size: 2rem; /* Adjust heading size on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+   
+
+    .contact-heading {
+        font-size: 2.5rem; /* Adjust heading size on larger screens */
+    }
+}
