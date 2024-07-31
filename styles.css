@@ -13,14 +13,15 @@ html {
 header {
     background-color: #0077B6;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 2rem; 
 }
 
 h1 {
     color: #90E0EF;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 h2 {
@@ -66,58 +67,129 @@ h2 {
 
 /* Profile image styling to fit within the header */
 header img.profile-fade {
-    max-width: 250px; /* Set desired maximum width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the container */
+    max-width: 250px;
+    height: auto; 
+    margin-right: 2rem;
+    object-fit: cover;
 }
 
 /* Additional specific fade effects */
 .subtitle-fade {
     opacity: 0;
-    animation: fadeIn 1s 1s forwards; /* Adjust delay as needed */
+    animation: fadeIn 1s 1s forwards;
 }
 
 /* Styling for navbar links */
 .navbar-link {
-    color: #EEEEEE; /* Adjust color as needed */
+    color: #EEEEEE;
     text-decoration: none;
     margin-left: 1rem;
     transition: color 0.3s;
 }
 
 .navbar-link:hover {
-    color: #ADE8F4; /* Adjust hover color as needed */
+    color: #ADE8F4;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack elements vertically on mobile */
-        align-items: center; /* Center align items */
-        padding: 20px 0; /* Add some padding */
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0;
     }
 
     nav {
-        position: relative; /* Position nav relative on mobile */
-        margin-bottom: 20px; /* Add space below nav */
+        position: relative; 
+        margin-bottom: 20px; 
     }
 
     img.profile-fade {
-        margin-bottom: 20px; /* Add space below the image */
+        margin-bottom: 20px;
     }
 }
 
-/* Projects slider  */
-/* Responsive Container */
-#project-slider {
-    background-color:#48CAE4;
-    width: 100%; /* Ensure full width */
-    max-width: 1000px; /* Set a max width */
-    height: auto; /* Let height adjust based on content */
-    padding: 20px; /* Add padding for spacing */
+/* About Section */
+#about {
+    margin-top: 4rem;
 }
 
-/* Button Styling */
+.details-section {
+    background-color: #023E8A;
+    color: #ADE8F4;
+    border-radius: 0.5rem; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 2rem; 
+    margin-top: 2rem;
+}
+
+.details-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.details-section p {
+    margin-bottom: 1rem;
+}
+
+.details-section p strong {
+    font-weight: bold;
+}
+
+.skills-container {
+    color: #023E8A;
+    background-color: #ADE8F4; 
+    justify-content:space-evenly;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-icon img {
+    width: 6rem;
+    height: 6rem;
+}
+@media (max-width: 768px) {
+    .skill-icon img {
+        width: 4rem; 
+        height: 4rem; 
+    }
+}
+
+.resume-button {
+    background-color: #023E8A;
+    color: #ADE8F4;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #48CAE4;
+}
+
+
+
+
+/* Projects Slider */
+
+#project-slider {
+    background-color: #48CAE4;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    padding: 20px;
+}
+
 .next-button, .prev-button {
     background-color: #0077B6;
     color: #FFFFFF;
@@ -125,32 +197,29 @@ header img.profile-fade {
     font-size: 1rem;
 }
 
-/* Text Colors and Responsiveness */
 .project-title {
     color: #023E8A;
     font-size: 1.5rem;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
 .project-description {
     color: #0077B6;
     font-size: 1rem;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
 
-/* Responsive Images */
 .project-slide img {
     width: auto;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container without stretching */
+    object-fit: cover;
 }
 
-/* Flexbox for vertical alignment */
 .project-slide {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Media queries for further adjustments */
@@ -179,75 +248,84 @@ header img.profile-fade {
     }
 }
 
-/* sketch slides */
+/* Sketch Slides */
 
-/* Style for the Splide slider */
 #sketch-slides {
     background-color: #023E8A;
-    height: 400px; /* Set a fixed height for the slider container */
-    overflow: visible; /* Allow overflow so images can enlarge without being cut off */
+    height: 400px;
+    overflow: visible;
 }
 
-/* Basic styles for the slider images */
 .sketch-image {
-    display: block; /* Ensure images are block elements */
-    width: auto; /* Allow image width to vary */
-    max-height: 300px; /* Set a maximum height for the images */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: rounded corners */
-    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+    display: block;
+    width: auto;
+    max-height: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Hover effect for images */
 .sketch-image:hover {
-    transform: scale(1.05); /* Enlarge the image slightly */
-    z-index: 2; /* Bring the hovered image above others */
+    transform: scale(1.05);
+    z-index: 2;
 }
 
-/* Style for the Splide slides */
 .splide__slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10px; /* Add horizontal padding */
-    overflow: hidden; /* Prevent overflow from the slide itself */
+    padding: 0 10px;
+    overflow: hidden;
 }
 
-/* Contact  */
-/* Basic styles for the contact section */
+
+/* Contact Section */
 #contact {
-    background-color: #03045E; /* Optional: Background color for the section */
+    background-color: #03045E;
+    padding: 2rem;
+    display: flex;
+    justify-content: center; /* Center horizontally */
 }
+
 .contact-container {
     background-color: #0096C7;
-}
-.contact-heading {
-    color: #ADE8F4; /* Heading color */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px; 
 }
 
-/* Styling for contact links */
+.contact-heading {
+    color: #ADE8F4;
+    font-size: 2rem;
+    text-align: center; 
+    margin-bottom: 1rem; 
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.contact-container li {
+    margin-bottom: 0.5rem;
+}
+
 .contact-link {
-    color: #FFFFFF; /* Link color */
-    text-decoration: underline; /* Underline links */
-    transition: color 0.3s; /* Smooth color transition */
+    color: #FFFFFF;
+    transition: color 0.3s;
 }
 
 .contact-link:hover {
-    color: #90E0EF; /* Change link color on hover */
+    color: #90E0EF;
+    text-decoration: underline;
 }
 
-/* Responsive layout for the contact section */
 @media (max-width: 768px) {
-   
     .contact-heading {
-        font-size: 2rem; /* Adjust heading size on mobile */
-    }
-}
-
-@media (min-width: 769px) {
-   
-
-    .contact-heading {
-        font-size: 2.5rem; /* Adjust heading size on larger screens */
+        font-size: 2rem;
     }
 }
