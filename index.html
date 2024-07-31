@@ -17,20 +17,76 @@
 </head>
 <body class="body">
 
-<!-- Header Section -->
-<header class="text-white py-10 h-screen md:h-1/2 flex flex-col md:flex-row items-center justify-between bg-[#3C5B6F] relative">
-    <nav class="absolute top-5 right-5 md:right-10 flex space-x-4 z-10">
-        <a href="#" class="navbar-link">Home</a>
-        <a href="#contact" class="navbar-link">Contact</a>
-    </nav>
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center h-full">
-        <img src="images/bg-removed-profile.png" alt="Profile Photo" class="h-40 w-40 md:h-80 md:w-80 rounded-lg profile-fade mb-5 md:mb-0 md:mr-5">
-        <div class="text-center md:text-left">
-            <h1 id="name" class="text-5xl md:text-7xl font-bold uppercase fade-in"></h1>
-            <p id="subtitle" class="text-2xl md:text-4xl mt-4 subtitle-fade" style="color: #90E0EF;">Engineering Student from DSATM</p>
+    <!-- Header Section -->
+    <header class="text-white py-10 h-screen md:h-1/2 flex flex-col md:flex-row items-center justify-between bg-[#3C5B6F] relative">
+        <nav class="absolute top-5 right-5 md:right-10 flex space-x-4 z-10">
+            <a href="#" class="navbar-link">Home</a>
+            <a href="#contact" class="navbar-link">Contact</a>
+        </nav>
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center h-full">
+            <img src="images/bg-removed-profile.png" alt="Profile Photo" class="h-40 w-40 md:h-80 md:w-80 rounded-lg profile-fade mb-5 md:mb-0 md:mr-5">
+            <div class="text-center md:text-left">
+                <h1 id="name" class="text-5xl md:text-7xl font-bold uppercase fade-in"></h1>
+                <p id="subtitle" class="text-2xl md:text-4xl mt-4 subtitle-fade" style="color: #90E0EF;">Engineering Student, AIML</p>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-10 mt-10">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-semibold mb-5">ABOUT ME</h2>
+            <p id="about-text">Aspiring AIML engineering student interested in Machine Learning and Data Analysis and to
+                apply theoretical knowledge and hands-on experience in Artificial Intelligence and Machine
+                Learning. Eager to contribute to innovative projects and collaborate with like-minded
+                professionals.
+            </p>
+        </div>
+        <div class="details-section">
+            <h3>Details</h3>
+            <p><strong>Education:</strong> Pursuing BE in Artificial Intelligence and Machine Learning, DSATM</p>
+            <p><strong>Areas of Interest:</strong> Web Development, Game Development Artificial Intelligence, Blockchain Technology</p>
+            <p><strong>Hobbies:</strong> Sketching, Gaming</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container mx-auto py-10 mt-10">
+        <h2 class="text-3xl font-semibold mb-5 text-center">SKILLS</h2>
+        <div class="skills-container bg-white rounded-lg shadow-lg p-8 flex justify-center flex-wrap gap-8">
+            <!-- SVG Icons for Skills -->
+            <div class="skill-icon">
+                <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png" alt="HTML" class="w-24 h-24">
+                <p class="mt-2 font-bold">HTML5</p>
+            </div>
+            <div class="skill-icon">
+                <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_css_icon_130661.png" alt="CSS" class="w-24 h-24">
+                <p class="mt-2 font-bold">CSS3</p>
+            </div>
+            <div class="skill-icon">
+                <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_python_icon_130221.png" alt="Python" class="w-24 h-24">
+                <p class="mt-2 font-bold">Python</p>
+            </div>
+            <div class="skill-icon">
+                <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_wordmark_logo_icon_146459.png" alt="Java" class="w-24 h-24">
+                <p class="mt-2 font-bold">Java</p>
+            </div>
+            <div class="skill-icon">
+                <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" alt="PostgreSQL" class="w-24 h-24">
+                <p class="mt-2 font-bold">PostgreSQL</p>
+            </div>
+            <div class="skill-icon">
+                <img src="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png" alt="Spring" class="w-24 h-24">
+                <p class="mt-2 font-bold">Spring</p>
+            </div>
+        </div>
+        <div class="text-center mt-10">
+            <h3 class="text-2xl font-semibold mb-5">RESUME</h3>
+            <a href="Resume2.pdf" class="resume-button bg-[#3C5B6F] text-white py-2 px-4 rounded-lg shadow-md hover:bg-[#2a4d6a]" target="_blank">Download Resume</a>
+        </div>
+    </section>
+
+
     
     <!-- Projects Section  -->
     <main class="container mx-auto py-10">
@@ -83,21 +139,20 @@
         </section>
     </main>
 
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-10">
+        <div class="contact-container p-8 rounded-lg shadow-lg w-full max-w-3xl">
+            <h2 class="text-3xl font-semibold mb-5 contact-heading">CONTACT</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <li>Phone: <a href="tel:+91 7619182890" class="contact-link">+91 7619182890</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/kamaleshgowda/" class="contact-link" target="_blank">Kamalesh N</a></li>
+                <li>GitHub: <a href="https://github.com/KamaleshGowda" class="contact-link" target="_blank">KamaleshGowda</a></li>
+                <li>Email: <a href="mailto:kamaleshgowda03@gmail.com" class="contact-link">kamaleshgowda03@gmail.com</a></li>
+                <li>Instagram: <a href="https://www.instagram.com/kamaleshgowda_n" class="contact-link" target="_blank">@kamaleshgowda_n</a></li>
+            </ul>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="flex justify-center items-center py-10">
-    <div class="contact-container p-8 rounded-lg shadow-lg w-full max-w-3xl">
-        <h2 class="text-3xl font-semibold mb-5 contact-heading">CONTACT</h2>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li>Phone: <a href="tel:+91 7619182890" class="contact-link">+91 7619182890</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/kamaleshgowda/" class="contact-link" target="_blank">Kamalesh N</a></li>
-            <li>GitHub: <a href="https://github.com/KamaleshGowda" class="contact-link" target="_blank">KamaleshGowda</a></li>
-            <li>Email: <a href="mailto:kamaleshgowda03@gmail.com" class="contact-link">kamaleshgowda03@gmail.com</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/kamaleshgowda_n" class="contact-link" target="_blank">@kamaleshgowda_n</a></li>
-        </ul>
-    </div>
-</section>
     <script src="script.js"></script>
-    <!-- <script src="splide-init.js" type="module"></script>     -->
 </body>
 </html>
