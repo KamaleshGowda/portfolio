@@ -1,0 +1,345 @@
+/* About Section */
+#about {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 2.5rem 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+
+.details-section {
+    background-color: #023E8A;
+    color: #ADE8F4;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.details-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.details-section p {
+    margin-bottom: 1rem;
+}
+
+.details-section p strong {
+    font-weight: bold;
+}
+
+/* Skills Section */
+#skills {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 2.5rem 1rem;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: #023E8A;
+    background-color: #ADE8F4;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-icon img {
+    width: 6rem;
+    height: 6rem;
+}
+
+.skill-icon p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .skill-icon img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.mt-10 {
+    margin-top: 2.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.resume-button {
+    display: inline-block;
+    background-color: #0096C7;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.resume-button:hover {
+    background-color: #023E8A;
+    color: #48CAE4;
+    transition: color 0.3s;
+}
+
+
+/* Projects Section */
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.projects-carousel {
+    background-color: #48CAE4;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    padding: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0077B6;
+    color: #FFFFFF;
+    padding: 10px;
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.project-title {
+    color: #023E8A;
+    font-size: 1.5rem;
+}
+
+.project-description {
+    color: #023E8A;
+    font-size: 1rem;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    color: #FFFFFF;
+    background: none;
+}
+
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        display: none;
+    }
+
+    .carousel-caption {
+        padding: 5px;
+        bottom: 20px;
+    }
+
+    .carousel-item img {
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .carousel-item img {
+        height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-item img {
+        height: 500px;
+    }
+}
+
+
+/* Hobbies Section */
+.hobbies-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+.hobbies-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.sketches {
+    overflow: hidden;
+    padding: 30px 0;
+    background-color: #023E8A;
+    white-space: nowrap;
+    position: relative;
+}
+
+.sketch-list {
+    display: inline-block;
+    animation: slide 30s infinite linear;
+    white-space: nowrap;
+}
+
+.sketches:hover .sketch-list {
+    animation-play-state: paused;
+}
+
+.sketch-list img {
+    height: 200px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.sketch-list img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.hobbies-text {
+    font-size: 0.875rem;
+    margin-top: 1.25rem;
+    text-align: center;
+}
+
+.art-ig {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.art-ig:hover {
+    text-decoration: underline;
+    color: #0096C7;
+}
+
+@media (max-width: 768px) {
+    .sketches {
+        padding: 15px 0;
+    }
+
+    .sketch-list img {
+        height: 150px;
+    }
+
+    .hobbies-text {
+        font-size: 0.75rem;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    background-color: #03045E;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    background-color: #0096C7;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.contact-heading {
+    color: #ADE8F4;
+    font-size: 3rem;
+    text-align: center; 
+    margin-bottom: 1rem; 
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.contact-container li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-link {
+    color: #FFFFFF;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #90E0EF;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contact-heading {
+        font-size: 2rem;
+    }
+}
