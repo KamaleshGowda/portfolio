@@ -1,7 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+    --header-height: 3rem;
+    --nav-width: 68px;
+    --first-color: #57385c;
+    --second-color: #a75265;
+    --third-color: #eb9e95;
+    --fourth-color: #f1dbc4;
+    --first-color-light: #AFA5D9;
+    --white-color: #F7F6FB;
+    --body-font: 'Nunito', sans-serif;
+    --normal-font-size: 1rem;
+    --z-fixed: 100;
+}
+
 body {
-    background-color: #040664;
-    color: #CAF0F8;
-    margin: 0;
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    padding: 0 1rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: .5s;
+    margin-left: var(--nav-width);
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--first-color);
+    color: #edd7f1;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -9,15 +38,99 @@ html {
     scroll-behavior: smooth;
 }
 
+.headernav {
+    width: 100%;
+    height: var(--header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: var(--first-color);
+    z-index: var(--z-fixed);
+    transition: .5s;
+}
+
+.header_toggle {
+    display: flex;
+    color: var(--first-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: var(--z-fixed);
+}
+
+.header_toggle i {
+    font-size: 1.5rem;
+    color: #EEEEEE;
+    cursor: pointer;
+}
+
+.header_img {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header_img img {
+    width: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.navbar-link {
+    color: #EEEEEE;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: var(--first-color-light);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .header_toggle {
+        display: flex; 
+    }
+
+    body {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .navbar {
+        display: flex;
+    }
+    .header_toggle {
+        display: none; 
+    }
+}
+
+
+
 /* Header Styling */
 .header {
-    color: #FFFFFF;
-    height: 80vh;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #2178b3;
+    background-color: var(--second-color);
     position: relative;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -27,28 +140,9 @@ html {
     font-family: 'Noto Sans Kannada', sans-serif;
 }
 
-.navbar {
-    position: absolute;
-    top: 1.25rem;
-    right: 1.25rem;
-    display: flex;
-    gap: 1rem;
-    z-index: 10;
-}
-
-.navbar-link {
-    color: #EEEEEE;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.navbar-link:hover {
-    color: #ADE8F4;
-}
-
 .header-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -57,7 +151,9 @@ html {
 }
 
 .profile-photo {
-    height: 25vh;
+    width: 60%;
+    max-width: 400px;
+    height: auto;
     border-radius: 0.5rem;
     opacity: 0;
     animation: fadeInProfile 1s 0.5s forwards;
@@ -69,7 +165,7 @@ html {
 }
 
 #name {
-    color: #90E0EF;
+    color: #dbc1c7;
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -79,7 +175,7 @@ html {
 }
 
 #subtitle {
-    color: #90E0EF;
+    color: #dbc1c7;
     font-size: 2rem;
     margin-top: 1rem;
     opacity: 0;
@@ -118,39 +214,30 @@ html {
     animation: fadeOut 1s forwards;
 }
 
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
-    .header {
-        height: 50vh;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-
+@media screen and (min-width: 900px) {
     .header-container {
-        flex-direction: row;
+        flex-direction: row; 
         align-items: center;
-        justify-content: center;
-    }
-
-    .profile-photo {
-        height: 30vh;
-        margin-bottom: 0;
-        margin-right: 1.25rem;
+        justify-content: space-between;
     }
 
     .text-content {
         text-align: left;
     }
 
+    .profile-photo {
+        margin-bottom: 0;
+        margin-left: 2rem;
+    }
+
     #name {
-        font-size: 4.5rem; 
+        font-size: 4rem;
     }
 
     #subtitle {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
-
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
     .header-container {
