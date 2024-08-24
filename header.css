@@ -4,7 +4,7 @@
     --header-height: 3rem;
     --nav-width: 68px;
     --first-color: #57385c;
-    --second-color: #a75265;
+    --second-color: #b35c81;
     --third-color: #eb9e95;
     --fourth-color: #f1dbc4;
     --first-color-light: #AFA5D9;
@@ -126,7 +126,7 @@ html {
 
 /* Header Styling */
 .header {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,9 +152,10 @@ html {
 
 .profile-photo {
     width: 60%;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
-    border-radius: 0.5rem;
+    border-radius: 30%;
+    border: #57385c solid 3px;
     opacity: 0;
     animation: fadeInProfile 1s 0.5s forwards;
     margin-bottom: 1.25rem;
