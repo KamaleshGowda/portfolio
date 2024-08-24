@@ -460,7 +460,7 @@ ul {
 
 .art-ig:hover {
     text-decoration: underline;
-    color: #0096C7;
+    color: var(--first-color-light);
 }
 
 @media (max-width: 768px) {
