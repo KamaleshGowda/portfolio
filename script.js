@@ -52,6 +52,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const closeSidebarOnClickOutside = (navId) => {
+        document.addEventListener('click', (e) => {
+            const nav = document.getElementById(navId);
+            const toggle = document.getElementById('header-toggle');
+    
+            if (nav.classList.contains('show') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('show');
+                toggle.classList.remove('bx-x');
+                document.getElementById('body-pd').classList.remove('body-pd');
+                document.getElementById('headernav').classList.remove('body-pd');
+            }
+        });
+    };
+    
+    // Call this function after initializing the navbar toggle
+    closeSidebarOnClickOutside('side-nav');
     
     window.addEventListener('scroll', function() {
         const backToTopButton = document.getElementById('back-to-top');
